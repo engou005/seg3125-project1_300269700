@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pawfect Spot</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <img src="pictures/logo.png" width="40" height="45" alt="Logo">
+            <p>Pawfect Spot</p>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="location.html">Location</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="booking.html" id="booking">Book Now</a>
+        </nav>
+    </div>
+
+    <div class="form">
+        <div class="form-container">
+            <h2>Book an Appointment</h2>
+            <form>
+                <label for="number">Enter your phone number:</label>
+                <input type="tel" id="tel" name="tel" required> 
+
+                <label for="date">Select a Date:</label>
+                <input type="date" id="date" name="date" required>
+    
+                <label for="time">Select an Hour:</label>
+                <input type="time" id="time" name="time" required>
+
+                <label for="name">Pet's Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your pet's name" required>
+    
+                <label for="pet">Select a Pet:</label>
+                <select id="pet" name="pet" required>
+                    <option value="" disabled selected>Choose one</option>
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                </select>
+    
+                <label for="size">Select a Size:</label>
+                <select id="size" name="size" required>
+                    <option value="" disabled selected>Choose one</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="big">Big</option>
+                </select>
+    
+                <label for="services">Services:</label>
+                <input type="text" id="services" name="services" required placeholder="Write all the services you want to book">
+    
+                <label for="notes">Special Notes:</label>
+                <textarea id="notes" name="notes" rows="3"></textarea>
+    
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

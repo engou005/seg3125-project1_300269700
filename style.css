@@ -1,0 +1,485 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #ddeaf3;
+}
+
+.header {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    padding: 10px 40px;
+    background-color: #b4d9f3;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
+}
+
+.logo-container img {
+    width: 55px;
+    height: 50px;
+    border-radius: 15px;
+    box-shadow: 2px 3px #4f7792;
+}
+
+p {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    color: #000000;
+    font-style: italic;
+    font-weight: bold;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center; 
+    gap: 65px; 
+}
+
+nav a {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style:italic;
+    font-size: 20px; 
+    color: #000000;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+    padding: 5px 0; 
+}
+
+nav a:hover {
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+#booking {
+    border-radius: 15px;
+    background-color: #57a7dc;
+    padding: 5px 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.body {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    height: calc(100vh - 70px); 
+    padding: 11px 40px;
+}
+
+#text {
+    display: flex;
+    flex-direction: column;
+    text-align: left; 
+    max-width: 45%;
+    margin-right: 45px;
+    gap:0px;
+}
+
+#text h3,
+#slogan, #description{
+    margin: 0; 
+    padding: 0; 
+}
+
+#text h3 {
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #57a7dc;
+    margin-bottom: 15px;
+}
+
+#slogan {
+    font-size: 42px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 15px;
+}
+
+#description {
+    margin-top: 15px;;
+    font-size: 15px;
+    line-height: 1.4;
+    color:#4f7792;
+}
+/* rocking animation */
+@keyframes rock {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-5deg); 
+    }
+    100% {
+        transform: rotate(0deg); 
+    }
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    height: calc(100vh - 70px); 
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 500px; 
+    object-fit: cover;
+    border-radius: 15px;
+    animation: rock 3s ease-in-out infinite;
+}
+
+/*Services page*/
+.page h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-top: 40px;
+    text-decoration: underline;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0;
+    padding: 0 20px;
+}
+
+.service-category {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    background-color:#ebf5fc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.service-text {
+    width: 55%;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.service-text h4 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.service-text ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.service-text ul li {
+    margin-bottom: 8px;
+}
+
+.service-image {
+    width: 30%;
+}
+
+.service-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .service-category {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-text, .service-image {
+        width: 100%;
+        text-align: center;
+    }
+
+    .service-image img {
+        width: 80%; /* Resize image for smaller screens */
+    }
+}
+
+/* Location page */
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+    padding: 0 20px;
+}
+
+.location-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 1000px; 
+    padding: 20px;
+}
+
+.location-image {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.location-image img {
+    width: 550px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.location-text {
+    flex: 2;
+    text-align: center;
+}
+
+.location-text h2 {
+    font-size: 44px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.location-text p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Responsive Adjustment */
+@media (max-width: 768px) {
+    .location-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .location-image {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .location-image img {
+        width: 100%; /* Make the image responsive */
+        max-width: 300px;
+    }
+}
+
+/* Contact Page */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 20px;
+    flex-wrap: wrap; 
+}
+
+.contact {
+    flex: 1;
+    padding: 30px;
+    background-color: #a9dafb;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    width: 100%;
+    max-width: 500px; 
+}
+
+.contact h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.contact label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.contact button {
+    width: 100%;
+    padding: 12px;
+    background-color: #57a7dc;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #4f7792;
+}
+
+/* Image Section */
+.contact-image {
+    flex: 1;
+    text-align: center;
+    padding-left: 20px;
+}
+
+.contact-image img {
+    max-width: 85%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .contact-image {
+        padding-left: 0;
+        margin-top: 20px;
+    }
+}
+
+/*Booking page */
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    margin-top: 15px;
+}
+
+.form-container {
+    background: #a9dafb;
+    padding: 20px;
+    width: 50%;
+    min-width: 320px;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-container h2 {
+    color: #333;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container label {
+    text-align: left;
+    margin-top: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.form-container input, select, textarea {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.form-container button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #57a7dc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #4f7792;
+}
+
+/* Confirmation page */
+.confirmation-container {
+    max-width: 700px;
+    min-height: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    background: #a9dafb;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    gap:15px;
+}
+
+.confirmation-container h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: underline;
+}
+
+.confirmation-container p {
+    font-size: 16px;
+    margin: 10px 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#message p{
+    margin-top: 25px;
+    font-size: 12px;
+    color: #555;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.confirmation-container a {
+    display: block;
+    text-decoration: none;
+    color: #555;
+    font-size: 10px;
+    margin-top: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
