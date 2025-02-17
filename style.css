@@ -162,7 +162,7 @@ nav a:hover {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
+    width: 85%;
     background-color:#ebf5fc;
     border-radius: 10px;
     padding: 20px;
@@ -171,7 +171,7 @@ nav a:hover {
 }
 
 .service-text {
-    width: 55%;
+    width: 65%;
     text-align: left;
     line-height: 1.5;
 }
@@ -348,6 +348,18 @@ nav a:hover {
     background-color: #4f7792;
 }
 
+@keyframes scaling {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); 
+    }
+    100% {
+        transform: scale(1); 
+    }
+}
+
 /* Image Section */
 .contact-image {
     flex: 1;
@@ -359,6 +371,7 @@ nav a:hover {
     max-width: 85%;
     height: auto;
     border-radius: 10px;
+    animation:scaling 3s ease-in-out infinite;
 }
 
 /* Responsive Styles */
